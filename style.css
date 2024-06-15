@@ -62,3 +62,53 @@ body {
   border-radius: 1.5rem;
   transition: transform 400ms;
 }
+
+.explode .head{
+  transform: translate(-50%, -8rem);
+}
+
+.head::before,
+.head::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 3rem;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+
+.head::before{
+  top: -1.25rem;
+  width: 3.5rem;
+  height: 1.25rem;
+  background-image: 
+    linear-gradient(
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0) 30%
+    )
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0) 70%,
+      rgba(255,255,255,0.25) 80%,
+      rgba(255,255,255,0) 90%
+    );
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.head::after{
+  bottom: -0.875rem;
+  width: 4rem;
+  height: 1rem;
+  background-image: 
+    linear-gradient(
+      rgba(0,0,0,0.2),
+      rgba(0,0,0,0.05) 50%
+    ),
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0) 70%,
+      rgba(255,255,255,0.25) 80%,
+      rgba(255,255,255,0) 90%
+    );
+  border-radius: 0 0 0.125rem 0.125rem;
+}
