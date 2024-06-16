@@ -63,13 +63,13 @@ body {
   transition: transform 400ms;
 }
 
-.explode .head{
+.explode .head {
   transform: translate(-50%, -8rem);
 }
 
 .head::before,
-.head::after{
-  content: '';
+.head::after {
+  content: "";
   position: absolute;
   left: 50%;
   height: 3rem;
@@ -77,38 +77,134 @@ body {
   background-color: currentColor;
 }
 
-.head::before{
+.head::before {
   top: -1.25rem;
   width: 3.5rem;
   height: 1.25rem;
-  background-image: 
-    linear-gradient(
-      rgba(255,255,255,0.5),
-      rgba(255,255,255,0) 30%
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0) 30%
     )
     linear-gradient(
       to right,
-      rgba(255,255,255,0) 70%,
-      rgba(255,255,255,0.25) 80%,
-      rgba(255,255,255,0) 90%
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.25) 80%,
+      rgba(255, 255, 255, 0) 90%
     );
   border-radius: 0.25rem 0.25rem 0 0;
 }
 
-.head::after{
+.head::after {
   bottom: -0.875rem;
   width: 4rem;
   height: 1rem;
-  background-image: 
-    linear-gradient(
-      rgba(0,0,0,0.2),
-      rgba(0,0,0,0.05) 50%
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05) 50%),
     linear-gradient(
       to right,
-      rgba(255,255,255,0) 70%,
-      rgba(255,255,255,0.25) 80%,
-      rgba(255,255,255,0) 90%
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.25) 80%,
+      rgba(255, 255, 255, 0) 90%
     );
   border-radius: 0 0 0.125rem 0.125rem;
+}
+
+/*controls*/
+.controls {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  padding: 1.5rem;
+  color: #333;
+  text-transform: uppercase;
+  background-color: rgba(220, 220, 220, 0.5);
+}
+
+.controls .title {
+  margin-bottom: 0.5rem;
+  font-weight: 1000;
+  font-size: 1.25rem;
+  letter-spacing: 0.03125rem;
+  text-align: center;
+  color: rgba(155, 8, 8, 0.852);
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  color: #000;
+  border-color: #ccc;
+}
+
+button:active {
+  background-color: #ddd;
+}
+
+.controls fieldset {
+  border: none;
+  margin: 1rem 0;
+}
+
+.controls legend {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 0.05125rem;
+}
+
+.controls label {
+  display: block;
+  font-size: x-small;
+  letter-spacing: 0.0625rem;
+}
+
+.controls input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  padding: 0.375rem;
+  margin: 0.3rem 0 1rem;
+  color: inherit;
+  background-color: currentColor;
+  border-radius: 1.5rem;
+  outline: none;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 10;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: hsl(285, 60%, 53%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls input[type="range"]::-moz-range-thumb {
+  position: relative;
+  z-index: 10;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls input[type="range"]::-moz-range-track {
+  background-color: transparent;
 }
