@@ -17,120 +17,177 @@
               <div class="left-eye"></div>
               <div class="mouth"></div>
             </div>
+
+            <div class="smiling-face">
+              <div class="right-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="left-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="mouth"></div>
+            </div>
+
+            <div class="worried-face">
+              <div class="right-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="left-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="mouth"></div>
+            </div>
+
+            <div class="frown-face">
+              <div class="right-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="left-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="mouth"></div>
+            </div>
+
+            <div class="surprised-face">
+              <div class="right-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="left-eye">
+                <div class="eyebrow"></div>
+              </div>
+              <div class="mouth"></div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="controls">
-        <h2 class="title">Controls</h2>
-
-        <button class="explode-button">Explode</button>
-        <button class="randomize-button">Randomize</button>
-
-        <fieldset class="head-expression">
-          <legend>Head</legend>
-
-          <div class="form-element">
-            <label for="expression">Expressions</label>
-            <input
-              id="expression"
-              class="expression-range"
-              name="expression"
-              type="range"
-              min="0"
-              max="500"
-              step="100"
-              value="0"
-            />
-          </div>
-        </fieldset>
-
-        <fieldset class="upperbody-color">
-          <legend>Upper Body</legend>
-
-          <div class="form-element">
-            <label for="upperbody-hue">Hue</label>
-            <input
-              id="upperbody-hue"
-              class="color-range upperbody-hue"
-              name="upperbody-hue"
-              type="range"
-              min="0"
-              max="360"
-              value="200"
-            />
-          </div>
-
-          <div class="form-element">
-            <label for="upperbody-saturation">Saturation</label>
-            <input
-              id="upperbody-saturation"
-              class="color-range upperbody-saturation"
-              name="upperbody-saturation"
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-            />
-          </div>
-
-          <div class="form-element">
-            <label for="upperbody-brightness">Brightness</label>
-            <input
-              id="upperbody-brightness"
-              class="color-range upperbody-brightness"
-              name="upperbody-brightness"
-              type="range"
-              min="0"
-              max="90"
-              value="90"
-            />
-          </div>
-        </fieldset>
-
-        <fieldset class="lowerbody-color">
-          <legend>Lower Body</legend>
-
-          <div class="form-element">
-            <label for="lowerbody-hue">Hue</label>
-            <input
-              id="lowerbody-hue"
-              class="color-range lowerbody-hue"
-              name="lowerbody-hue"
-              type="range"
-              min="0"
-              max="360"
-              value="200"
-            />
-          </div>
-
-          <div class="form-element">
-            <label for="lowerbody-saturation">Saturation</label>
-            <input
-              id="lowerbody-saturation"
-              class="color-range lowerbody-saturation"
-              name="lowerbody-saturation"
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-            />
-          </div>
-
-          <div class="form-element">
-            <label for="lowerbody-brightness">Brightness</label>
-            <input
-              id="lowerbody-brightness"
-              class="color-range lowerbody-brightness"
-              name="lowerbody-brightness"
-              type="range"
-              min="0"
-              max="90"
-              value="90"
-            />
-          </div>
-        </fieldset>
+      <div class="upperbody">
+        <div class="torso"></div>
+        <div class="right-arm">
+          <div class="right-hand"></div>
+        </div>
+        <div class="left-arm">
+          <div class="left-hand"></div>
+        </div>
       </div>
+
+      <div class="lowerbody">
+        <div class="waist"></div>
+        <div class="crotch"></div>
+        <div class="right-leg"></div>
+        <div class="left-leg"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <h2 class="title">Controls</h2>
+
+      <button class="explode-button">Explode</button>
+      <button class="randomize-button">Randomize</button>
+
+      <fieldset class="head-expression">
+        <legend>Head</legend>
+
+        <div class="form-element">
+          <label for="expression">Expressions</label>
+          <input
+            id="expression"
+            class="expression-range"
+            name="expression"
+            type="range"
+            min="0"
+            max="500"
+            step="100"
+            value="0"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="upperbody-color">
+        <legend>Upper Body</legend>
+
+        <div class="form-element">
+          <label for="upperbody-hue">Hue</label>
+          <input
+            id="upperbody-hue"
+            class="color-range upperbody-hue"
+            name="upperbody-hue"
+            type="range"
+            min="0"
+            max="360"
+            value="200"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="upperbody-saturation">Saturation</label>
+          <input
+            id="upperbody-saturation"
+            class="color-range upperbody-saturation"
+            name="upperbody-saturation"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="upperbody-brightness">Brightness</label>
+          <input
+            id="upperbody-brightness"
+            class="color-range upperbody-brightness"
+            name="upperbody-brightness"
+            type="range"
+            min="0"
+            max="90"
+            value="90"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="lowerbody-color">
+        <legend>Lower Body</legend>
+
+        <div class="form-element">
+          <label for="lowerbody-hue">Hue</label>
+          <input
+            id="lowerbody-hue"
+            class="color-range lowerbody-hue"
+            name="lowerbody-hue"
+            type="range"
+            min="0"
+            max="360"
+            value="200"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="lowerbody-saturation">Saturation</label>
+          <input
+            id="lowerbody-saturation"
+            class="color-range lowerbody-saturation"
+            name="lowerbody-saturation"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="lowerbody-brightness">Brightness</label>
+          <input
+            id="lowerbody-brightness"
+            class="color-range lowerbody-brightness"
+            name="lowerbody-brightness"
+            type="range"
+            min="0"
+            max="90"
+            value="90"
+          />
+        </div>
+      </fieldset>
     </div>
 
     <script src="script.js"></script>
