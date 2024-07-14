@@ -1,5 +1,7 @@
-html {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 *,
@@ -8,6 +10,10 @@ html {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
@@ -30,7 +36,7 @@ body {
   transform: scale(0.75) translateZ(0);
 }
 
-/* Head */
+/*head*/
 
 .head {
   position: absolute;
@@ -110,7 +116,7 @@ body {
   border-radius: 0 0 0.125em 0.125em;
 }
 
-/* Faces */
+/*faces*/
 
 .faces-wrap {
   height: 100%;
@@ -131,7 +137,7 @@ body {
   flex: 1 0 100%;
 }
 
-/* Eyes */
+/*eyes*/
 
 .eye {
   position: absolute;
@@ -211,7 +217,7 @@ body {
 }
 
 
-/* Brow */
+/*eyebrow*/
 
 .brow {
   position: absolute;
@@ -309,7 +315,7 @@ body {
   transform: rotate(15deg) translateX(-50%) translateZ(0);
 }
 
-/* Mouth */
+/*mouth*/
 
 .mouth {
   position: absolute;
@@ -432,7 +438,7 @@ body {
   border-radius: 70% 70% 60% 60%/100% 100% 50% 50%;
 }
 
-/* Upper Body */
+/*upper body*/
 
 .upper-body {
   position: absolute;
@@ -620,7 +626,7 @@ body {
   border-radius: 50%;
 }
 
-/* Lower Body */
+/*lower body*/
 
 .lower-body {
   position: absolute;
@@ -752,23 +758,26 @@ body {
   margin-left: 2.75em;
 }
 
-/* Controls */
+/*controls*/
 
 .controls {
   position: relative;
   z-index: 1;
   width: 200px;
   padding: 1.5em;
-  color: #333;
+  color: hsla(268, 21%, 51%, 1);
   text-transform: uppercase;
-  background-color: rgba(220,220,220,0.5);
+  background-color: rgba(45, 110, 104, 0.5);
 }
 
 .controls .title {
   margin-bottom: 0.5rem;
-  font-weight: 900;
+  font-weight: 1000;
   font-size: 1.25em;
   letter-spacing: 0.03125em;
+  letter-spacing: 0.03125em;
+  text-align: center;
+  color: rgba(155, 8, 8, 0.852);
 }
 
 .button {
@@ -776,6 +785,7 @@ body {
   padding: 0.5em 1em;
   margin: 0.25rem 0;
   color: #666;
+  font-weight: 700;
   font-family: inherit;
   text-transform: uppercase;
   letter-spacing: 0.0625em;
@@ -803,14 +813,17 @@ body {
 .controls legend {
   margin-bottom: 1rem;
   font-weight: bold;
-  font-size: small;
-  letter-spacing: 0.03125em;
+  font-size: 17px;
+  letter-spacing: 0.05125em;
+  color: #333;
 }
 
 .controls label {
   display: block;
   font-size: x-small;
   letter-spacing: 0.0625em;
+  color: hsla(345, 93%, 22%, 1);
+  font-weight: 700;
 }
 
 .controls input[type="range"] {
@@ -834,848 +847,6 @@ body {
   z-index: 10;
   width: 1.5em;
   height: 1.5em;
-  background-color: hsla(50,90%,50%,1);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.controls input[type="range"]::-moz-range-thumb {
-  position: relative;
-  z-index: 10;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: #333;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.controls input[type="range"]::-moz-range-track {
-  background-color: transparent;
-}
-
-
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-  font-family: "Poppins", sans-serif;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  height: 100vh;
-}
-
-.lego-figure {
-  position: relative;
-  width: 300px;
-  height: 485px;
-  margin: auto;
-  perspective: 200;
-  transform-style: preserve-3d;
-  transition: transform 400ms;
-}
-
-.lego-figure.explode {
-  transform: scale(0.73) translateZ(0);
-}
-
-/*lego head
-.head {
-  position: absolute;
-  z-index: 2;
-  top: 2.25em;
-  left: 50%;
-  width: 7.25em;
-  height: 6.25em;
-  transform: translateX(-50%);
-  color: hsla(50, 90%, 50%, 1);
-  background-color: currentColor;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0) 20%,
-      rgba(0, 0, 0, 0) 80%,
-      rgba(0, 0, 0, 0.15) 95%,
-      rgba(0, 0, 0, 0.3)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0)
-    );
-  border-radius: 1.5em;
-  transition: transform 400ms;
-}
-
-.explode .head {
-  transform: translate(-50%, -8em);
-}
-
-.head::before,
-.head::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  height: 2em;
-  transform: translateX(-50%);
-  background-color: currentColor;
-}
-
-.head::before {
-  top: -1.25em;
-  width: 3.5em;
-  height: 1.25em;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0) 30%
-    )
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 70%,
-      rgba(255, 255, 255, 0.25) 80%,
-      rgba(255, 255, 255, 0) 90%
-    );
-  border-radius: 0.25em 0.25em 0 0;
-}
-
-.head::after {
-  bottom: -0.875em;
-  width: 4.5em;
-  height: 1em;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05) 50%),
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 70%,
-      rgba(255, 255, 255, 0.25) 80%,
-      rgba(255, 255, 255, 0) 90%
-    );
-  border-radius: 0 0 0.125em 0.125em;
-}
-
-/*lego faces
-.expressions {
-  height: 100%;
-  overflow: hidden;
-}
-
-.faces {
-  display: flex;
-  transition: transform 400ms cubic-bezier(0, 0, 0, 1.25);
-}
-
-.explode .faces {
-  transform: translateX(-500%) !important;
-}
-
-.face {
-  position: relative;
-  flex: 1 0 100%;
-}
-
-/*eyes
-.eye {
-  position: absolute;
-  top: 2.25em;
-  width: 0.75em;
-  height: 0.9375em;
-  color: #fff;
-  background-color: currentColor;
-  border-radius: 50%;
-  box-shadow: inset 0 -0.125em 0 0.25em #000;
-}
-
-.eye::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  color: #000;
-  transform: translateX(-50%);
-}
-
-.right-eye {
-  left: 2.25em;
-}
-
-.left-eye {
-  right: 2.25em;
-}
-
-.normal-face .eye {
-  top: 2.4375em;
-  height: 0.75em;
-  color: #000;
-  box-shadow: none;
-}
-
-.bigsmile-face .right-eye,
-.bigsmile-face .left-eye {
-  top: 2em;
-}
-
-.worried-face .eye,
-.surprised-face .eye {
-  top: 2.345em;
-  height: 0.75em;
-  color: #000;
-  box-shadow: inset 0 -0.125em 0 0.31125em #000;
-}
-
-.worried-face .right-eye {
-  left: 2.125em;
-}
-
-.worried-face .left-eye {
-  right: 2.125em;
-}
-
-.frown-face .eye {
-  top: 2.625em;
-}
-
-.frown-face .eye::before {
-  bottom: 80%;
-  width: 1.25em;
-  height: 1em;
-  border: 0.1875em solid transparent;
-  border-bottom-color: currentColor;
-  border-radius: 50%;
-}
-
-.frown-face .right-eye::before {
-  margin-left: -0.25em;
-  transform: translateX(-50%) rotate(-20deg);
-}
-
-.frown-face .left-eye::before {
-  margin-left: 0.25em;
-  transform: translateX(-50%) rotate(20deg);
-}
-
-/*eyebrow
-.eyebrow {
-  position: absolute;
-  bottom: 0.625em;
-  left: 50%;
-  width: 1.75em;
-  height: 1em;
-  transform-origin: 0 0;
-  transform: translateX(-50%);
-  color: #000;
-  border: 0.25em solid transparent;
-  border-top-color: currentColor;
-  border-bottom: none;
-  border-radius: 50% 50% 0 0;
-}
-
-.right .eyebrow {
-  border-left: none;
-}
-
-.left .eyebrow {
-  border-right: none;
-}
-
-.bigsmile-face .eyebrow {
-  bottom: 0.375em;
-  width: 1.25em;
-  height: 1.375em;
-  border: none;
-  border-top: 0.25em solid;
-  border-radius: 50% 50% 0 0;
-}
-
-.bigsmile-face .right .eyebrow {
-  margin-left: -0.125em;
-  transform: skewY(10deg) translateX(-50%) translateZ(0);
-}
-
-.bigsmile-face .left .eyebrow {
-  margin-left: 0.125em;
-  transform: skewY(10deg) translateX(-50%) translateZ(0);
-}
-
-.worried-face .eyebrow {
-  width: 1.25em;
-  height: 0.875em;
-  bottom: 1.25em;
-  border-top: none;
-  border-bottom: 0.25em solid currentColor;
-  border-radius: 0 0 50% 50%;
-}
-
-.worried-face .right .eyebrow {
-  margin-left: -0.25em;
-  transform: rotate(-20deg) translateX(-50%) translateZ(0);
-}
-
-.worried-face .left .eyebrow {
-  margin-left: 0.25em;
-  transform: rotate(20deg) translateX(-50%) translateZ(0);
-}
-
-.frown-face .eyebrow {
-  width: 1.5em;
-  bottom: 1.375em;
-  border-top: none;
-  border-bottom: 0.25em solid currentColor;
-  border-radius: 0 0 50% 50%;
-}
-
-.frown-face .right .eyebrow {
-  margin-left: -0.625em;
-  transform: rotate(-35deg) translateX(-50%) translateZ(0);
-}
-
-.frown-face .left .eyebrow {
-  margin-left: 0.625em;
-  transform: rotate(35deg) translateX(-50%) translateZ(0);
-}
-
-.surprised-face .eyebrow {
-  bottom: 1em;
-  width: 1.5em;
-  border-right: none;
-  border-left: none;
-}
-
-.surprised-face .right .eyebrow {
-  margin-left: -0.5em;
-  transform: rotate(-15deg) translateX(-50%) translateZ(0);
-}
-
-.surprised-face .left .eyebrow {
-  margin-left: 0.5em;
-  transform: rotate(15deg) translateX(-50%) translateZ(0);
-}
-
-/*mouth
-.mouth {
-  position: absolute;
-  top: 3.125em;
-  left: 50%;
-  width: 2.5em;
-  height: 1.5em;
-  transform: translateX(-50%);
-  color: #000;
-  border: 0.25em solid transparent;
-  border-bottom-color: currentColor;
-  border-radius: 50%;
-}
-
-.mouth::before,
-.mouth::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.normal-face .mouth {
-  top: 2.9375em;
-}
-
-.bigsmile-face .mouth {
-  top: 0.125em;
-  width: 3.125em;
-  height: 5em;
-  border: none;
-  border-bottom: 1.5em solid;
-  border-radius: 0 0 70% 70%/0 0 50% 50%;
-}
-
-.bigsmile-face .mouth::before {
-  top: 1.6875em;
-  width: 4.25em;
-  height: 2em;
-  color: #000;
-  border: 0.1875em solid transparent;
-  border-bottom-color: currentColor;
-  border-radius: 0 0 50% 50%;
-  box-shadow: 0 0.9375em 0 -0.75em #fff;
-}
-
-.bigsmile-face .mouth::after {
-  top: 4.4375em;
-  width: 1.25em;
-  height: 0.375em;
-  color: #c00;
-  background-color: currentColor;
-  border-radius: 70% 70% 70% 70%/50% 50% 100% 100%;
-}
-
-.worried-face .mouth {
-  top: 4.5em;
-  width: 2em;
-  height: 1.25em;
-  transform: translateX(-50%) rotate(-10deg) translateZ(0);
-  border-top-color: currentColor;
-  border-right: none;
-  border-bottom-color: transparent;
-  border-right-width: 0.5em;
-  border-radius: 50% 50% 0 0;
-}
-
-.frown-face .mouth {
-  top: 4.25em;
-  width: 2.75em;
-  height: 2em;
-  margin-left: -0.125em;
-  transform: translateX(-50%) rotate(-15deg) translateZ(0);
-  border-top-color: currentColor;
-  border-right: none;
-  border-bottom-color: transparent;
-  border-right-width: 0.5em;
-  border-radius: 50% 50% 0 0;
-}
-
-.frown-face .mouth::before {
-  top: 0.375em;
-  width: 0.75em;
-  height: 0.625em;
-  margin-left: 0.125em;
-  color: #000;
-  border: 0.125em solid transparent;
-  border-top-color: currentColor;
-  border-right: none;
-  border-radius: 50%;
-  border-radius: 50% 50% 0 0;
-}
-
-.surprised-face .mouth {
-  top: 4em;
-  width: 3.125em;
-  height: 1.625em;
-  background-color: currentColor;
-  border: none;
-  border-radius: 70% 70% 60% 60%/100% 100% 50% 50%;
-}
-
-.surprised-face .mouth::before,
-.surprised-face .mouth::after {
-  color: #fff;
-  background-color: currentColor;
-}
-
-.surprised-face .mouth::before {
-  top: 0.1875em;
-  width: 2em;
-  height: 0.375em;
-  border-radius: 70% 70% 60% 60%/100% 100% 50% 50%;
-}
-
-.surprised-face .mouth::after {
-  bottom: 0.1875em;
-  width: 2.25em;
-  height: 0.375em;
-  border-radius: 70% 70% 60% 60%/100% 100% 50% 50%;
-}
-
-/*upper body
-.upperbody {
-  position: absolute;
-  z-index: 1;
-  top: 9.25em;
-  width: 100%;
-  color: hsl(200, 0%, 90%);
-  perspective: 320px;
-}
-
-.upperbody::before,
-.upperbody::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.upperbody::before {
-  bottom: 100%;
-  width: 3em;
-  height: 3.5em;
-  background-color: currentColor;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0) 90%
-    ),
-    linear-gradient(
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0.05) 80%,
-      rgba(0, 0, 0, 0.1)
-    );
-  border-radius: 50% 50% 0 0/10% 10% 0 0;
-}
-
-.upperbody::after {
-  top: -2.75em;
-  width: 2em;
-  height: 2em;
-  background-color: rgba(0, 0, 0, 0.9);
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0.2) 80%,
-    rgba(255, 255, 255, 0)
-  );
-  border-radius: 50%/10%;
-}
-
-.torso {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 50%;
-  width: 7.75em;
-  height: 9.125em;
-  transform-origin: top center;
-  transform: translateX(-50%) rotateX(45deg);
-  background-color: currentColor;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0) 80%,
-    rgba(0, 0, 0, 0.05) 98%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-  border-radius: 0.5em 0.5em 0.125em 0.125em;
-  box-shadow: inset 0 0.25em 0.25em rgba(255, 255, 255, 0.5),
-    -1.5em 0.5em 1em -1.25em rgba(0, 0, 0, 0.3),
-    1.5em 0.5em 1em -1.25em rgba(0, 0, 0, 0.3);
-}
-
-.right-arm,
-.left-arm {
-  position: absolute;
-  left: 50%;
-  top: 4em;
-  width: 3em;
-  height: 5.5em;
-  transform-origin: center 1.5em;
-  background-color: currentColor;
-  border-radius: 1.5em/1em;
-}
-
-.right-arm {
-  margin-left: -6.25rem;
-  transform: translateX(-50%) rotate(12deg);
-  box-shadow: inset 0.5em 0.25em 0.375em -0.25em rgba(255, 255, 255, 0.4),
-    inset 0 0 0.75em 0.75em currentColor,
-    inset 0 0 0 2em rgba(255, 255, 255, 0.15);
-}
-
-.left-arm {
-  margin-left: 6.25rem;
-  transform: translateX(-50%) rotate(-12deg);
-  box-shadow: inset -0.5em 0.25em 0.375em -0.25em rgba(255, 255, 255, 0.4),
-    inset 0 0 0.75em 0.75em currentColor,
-    inset 0 0 0 2em rgba(255, 255, 255, 0.15);
-}
-
-.right-arm::before,
-.left-arm::before {
-  content: "";
-  position: absolute;
-  bottom: 3.5em;
-  left: 0;
-  width: 100%;
-  height: 5.5em;
-  backface-visibility: hidden;
-  transform-origin: center 4.5em;
-  background-color: currentColor;
-  border-radius: 1.5em/1.5em 1.5em 1em 1em;
-}
-
-.right-arm::before {
-  transform: rotate(14deg);
-  box-shadow: inset 0.75em 0.125em 0.375em -0.5em rgba(255, 255, 255, 0.4),
-    inset 0.25em 1.1em 0.75em 0.75em currentColor,
-    inset 0 0 0 2em rgba(255, 255, 255, 0.15);
-}
-
-.left-arm::before {
-  transform: rotate(-14deg);
-  box-shadow: inset -0.75em 0.125em 0.375em -0.5em rgba(255, 255, 255, 0.4),
-    inset -0.25em 1.1em 0.75em 0.75em currentColor,
-    inset 0 0 0 2em rgba(255, 255, 255, 0.15);
-}
-
-.right-arm::after,
-.left-arm::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1.5em;
-  transform-origin: center 4.5em;
-  background-color: currentColor;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1em rgba(255, 255, 255, 0.2);
-}
-
-.right-hand,
-.left-hand {
-  position: absolute;
-  z-index: 1;
-  top: 80%;
-  left: 50%;
-  width: 1.75em;
-  height: 1.75em;
-  transform: translateX(-50%);
-  color: hsla(50, 90%, 50%, 1);
-  background-color: currentColor;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.2),
-    rgba(0, 0, 0, 0.075),
-    rgba(255, 255, 255, 0.2)
-  );
-  border-radius: 1em/0.5em;
-  box-shadow: 0 -0.125em 0.125em rgba(0, 0, 0, 0.1);
-}
-
-.right-hand::before,
-.left-hand::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 1em;
-  left: 50%;
-  width: 3.5em;
-  height: 3.5em;
-  transform: translateX(-50%);
-  color: hsla(50, 90%, 60%, 1);
-  border: 0.75em solid;
-  border-bottom-color: transparent;
-  box-shadow: inset 0 0.25em rgba(0, 0, 0, 0.15), inset 0 0.25em;
-  border-radius: 50%;
-}
-
-/*lower body
-.lowerbody {
-  position: absolute;
-  top: 18.5em;
-  left: 50%;
-  width: 10em;
-  height: 11.75em;
-  transform: translateX(-50%);
-  color: hsl(200, 0%, 90%);
-  transition: transform 400ms;
-}
-
-.explode .lowerbody {
-  transform: translate(-50%, 8em);
-}
-
-.lowerbody > div {
-  position: absolute;
-  background-color: currentColor;
-}
-
-.waist {
-  z-index: 1;
-  top: 0;
-  width: 100%;
-  height: 1.5em;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0) 80%,
-    rgba(255, 255, 255, 0.1) 90%,
-    rgba(255, 255, 255, 0.15)
-  );
-  border-radius: 0.125em;
-  box-shadow: 0 0.75em 0.75em -0.25em rgba(0, 0, 0, 0.25);
-}
-
-.waist::before,
-.waist::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  width: 3em;
-  height: 3em;
-  transform: translateX(-50%);
-  background-color: currentColor;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0) 10%
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 20%,
-      rgba(255, 255, 255, 0.25) 25%,
-      rgba(255, 255, 255, 0) 40%,
-      rgba(255, 255, 255, 0) 60%,
-      rgba(255, 255, 255, 0.25) 75%,
-      rgba(255, 255, 255, 0) 80%,
-      rgba(255, 255, 255, 0.2)
-    ),
-    linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.15));
-}
-
-.waist::before {
-  margin-left: -2.75em;
-  border-radius: 50% 30% 0 0/100% 30% 0 100%;
-}
-
-.waist::after {
-  margin-left: 2.75em;
-  border-radius: 30% 50% 0% 0%/30% 100% 100% 0%;
-}
-
-.crotch {
-  z-index: 1;
-  top: 1.5em;
-  left: 50%;
-  width: 10%;
-  height: 4.5em;
-  transform: translateX(-50%);
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.05) 10%,
-    rgba(0, 0, 0, 0.2) 10%,
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0.1)
-  );
-  border-radius: 0 0 0.25em 0.25em;
-  box-shadow: -0.5em 0 0.25em -0.25em rgba(0, 0, 0, 0.15),
-    0.5em 0 0.25em -0.25em rgba(0, 0, 0, 0.15),
-    -0.25em 0 0.125em -0.125em rgba(0, 0, 0, 0.2),
-    0.25em 0 0.125em -0.125em rgba(0, 0, 0, 0.2);
-}
-
-.right-leg,
-.left-leg {
-  bottom: 0;
-  left: 50%;
-  width: 4.75em;
-  height: 10.75em;
-  transform: translateX(-50%);
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.1) 10%,
-    rgba(255, 255, 255, 0.1) 25%,
-    rgba(0, 0, 0, 0.1) 45%,
-    rgba(0, 0, 0, 0),
-    50%,
-    rgba(0, 0, 0, 0.05),
-    65%,
-    rgba(0, 0, 0, 0) 74%,
-    rgba(0, 0, 0, 0.1),
-    78%,
-    rgba(255, 255, 255, 0.2) 78%,
-    rgba(255, 255, 255, 0) 82%,
-    rgba(0, 0, 0, 0.1)
-  );
-  border-radius: 0.25em 0.25em 0.0625em 0.0625em;
-}
-
-.right-leg {
-  margin-left: -2.75em;
-}
-
-.left-leg {
-  margin-left: 2.75em;
-}
-
-/*controls
-.controls {
-  position: relative;
-  z-index: 1;
-  width: 200px;
-  padding: 1.5em;
-  color: hsla(268, 21%, 51%, 1);
-  text-transform: uppercase;
-  background-color: rgba(220, 220, 220, 0.5);
-}
-
-.controls .title {
-  margin-bottom: 0.5rem;
-  font-weight: 1000;
-  font-size: 1.25em;
-  letter-spacing: 0.03125em;
-  text-align: center;
-  color: rgba(155, 8, 8, 0.852);
-}
-
-button {
-  width: 100%;
-  padding: 0.5em 1em;
-  margin: 0.25rem 0;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.0625em;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 0.5em;
-  cursor: pointer;
-  outline: none;
-  font-weight: 700;
-}
-
-button:hover {
-  color: #000;
-  border-color: #ccc;
-}
-
-button:active {
-  background-color: #ddd;
-}
-
-.controls fieldset {
-  border: none;
-  margin: 1rem 0;
-}
-
-.controls legend {
-  margin-bottom: 1rem;
-  font-weight: bold;
-  font-size: 17px;
-  letter-spacing: 0.05125em;
-  color: #333;
-}
-
-.controls label {
-  display: block;
-  font-size: x-small;
-  letter-spacing: 0.0625em;
-  color: hsla(345, 93%, 22%, 1);
-  font-weight: 700;
-}
-
-.controls input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
-  width: 100%;
-  height: 2em;
-  padding: 0.375em;
-  margin: 0.3rem 0 1em;
-  color: inherit;
-  background-color: currentColor;
-  border-radius: 1.5em;
-  outline: none;
-}
-
-.controls input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
-  z-index: 10;
-  width: 1.5em;
-  height: 1.5em;
   background-color: rgb(172, 146, 201);
   border-radius: 50%;
   cursor: pointer;
@@ -1694,4 +865,3 @@ button:active {
 .controls input[type="range"]::-moz-range-track {
   background-color: transparent;
 }
-*/
