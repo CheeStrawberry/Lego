@@ -1,6 +1,6 @@
 # Lego
 
-An advanced weather application that provides current weather conditions, including temperature, precipitation, humidity, and wind speed. The app also displays a four-day weather forecast, allowing users to see upcoming weather conditions at a glance.
+A dynamic Lego Minifigure customizer application that allows users to create and modify their own Lego minifigure by adjusting facial expressions, and customizing the upper and lower body colors. This project showcases the interplay between CSS, HTML, and JavaScript to create an interactive and fun user experience.
 
 ## Features
 
